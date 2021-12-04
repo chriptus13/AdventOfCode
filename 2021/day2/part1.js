@@ -5,7 +5,7 @@ if (process.argv.length !== 3) {
 	process.exit(0)
 }
 
-const [, , fileName] = Array.prototype.slice.call(process.argv)
+const [, , fileName] = process.argv
 
 fs.readFile(fileName)
 	.then(data => data.toString().split(/\r?\n/))
